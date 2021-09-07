@@ -3,11 +3,9 @@ body{
     box-shadow: 0 0 50px;
 }
 /* Header */
-header{
-    background-color: black;
-}
 
 header nav{
+    background-color: black;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -34,81 +32,81 @@ header ul span {
     margin-top: 13px;
     font-size: 10px;
 }
-/* Pack */
-header .pack{
-    background-color: #334d5c;
+/* Banner */
+header>div img {
+    width: 100%;
+}
+/* Section Intro */
+.intro{
     display: flex;
-    align-items: center;
-    color: white;
-    padding: 30px 50px;
+    padding: 50px;
 }
-
-header .pack div{
-    flex: 1;
-    text-align: center;
-    
-}
-header .pack h1{
+.intro>div:first-of-type{
     flex: 2;
-    font-size: 55px;
-    text-transform: capitalize;
+    text-align: end;
+    margin: 0 12% 0 0;
 }
-
-header .pack span{
-    font-size: 40px;
+.intro>div:last-child{
+    flex: 4;
 }
-
-/* Fin header */
-
-/* All section */
-.eclosion h1 {
-    background-color:#334d5c; 
-    margin: 15px auto;
-    max-width: max-content;
-    font-size: 55px;
-    padding: 10px 30px;
+/* Section Pack et outils */
+section:nth-of-type(2){
+    background-color:#334d5c ;
     color: white;
-    font-weight: normal;
-    
 }
-
-.section-1-contenu{
+section:nth-of-type(3){
+    background-color:white ;
+    color: black;
+}
+.sc .row{
     display: flex;
-    padding: 10px 60px;
 }
-
-.section-1-contenu .image{
-    flex: 1;
-}
-.section-1-contenu .contenu{
+.sc .row .imgTitre{
     flex: 2;
-    font-size: 20px;
-}
+    text-align: end;
+    margin: 50px 35px 0 0;
 
-.beige {
-    background-color:#eae3d6; 
+}
+.sc .row .zoneTexte{
+    flex: 4;  
+    margin: 60px 0 0 70px ;
+
+}
+.sc .row .zoneTexte h1{
+    font-size: 40px
+}
+.sc .row .zoneTexte span{
+    font-size: 30px;
+    font-weight: 400;
+}
+.sc .choix{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 40px 60px;
+    padding-bottom: 30px;
 }
-
-.beige .contenu{
+.sc .choix div{
     width: 25%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
-
-.beige .contenu img{
-    height: 100px;
+.sc .choix h1{
+    font-size: 30px;
 }
-.beige .contenu span{
-    margin-top: 20px;
-    font-size: 20px;
+.sc .choix button{
+    width: 100%;
+    padding: 15px;
 }
-
-/* End section */
+.sc .resize{
+    height: 200px;
+}
+.sc .resize+p+button{
+    background-color: black;
+    color: white;
+    border: none;
+}
 
 /* Footer */
 footer{
@@ -136,85 +134,55 @@ footer span{
     right: 10px;
 }
 
-/* media queries */
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+/* TEL */
+@media screen and (max-width:620px) {
+    body{
+        margin: 0 5%;
+    }
     header ul {
-        flex: 1;
-        display: flex;
+        display: none;
+    }
+    .intro,
+    .sc .row{
         flex-direction: column;
-        justify-content: space-between;
-        list-style-type: none;
-        align-items: flex-end;
+    }
+    .sc .choix div{
+        width: 100%;
+    }
+    .sc .choix button{
+        width: auto;
+    }
+    .sc .row .zoneTexte, .sc .row .imgTitre{
+        margin: 15px auto;
+        text-align: center;
+    }
+    footer{
+        flex-direction: column;
+    }
 }
-    header ul span {
-        margin-top: 13px;
-        margin-bottom: 13px;
-        font-size: 10px;
-}
-
-header .pack{
-    background-color: #334d5c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    padding: 30px 50px;
-    margin: auto;
-}
-
-header .pack h1{
-    flex: 2;
-    font-size: 55px;
-    text-transform: capitalize;
-    text-align: center;
-}
-
-.section-1-contenu{
-    display: flex;
-    padding: 10px 60px;
-}
-
-.section-1-contenu{
-    display: flex;
-    padding: 10px 60px;
-    flex-direction: column;
-    align-items: center;
-}
-.section-1-contenu .contenu{
-    flex: 2;
-    font-size: 20px;
-    text-align: center;
-}
-.beige {
-    background-color:#eae3d6; 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px 60px;
-}
-.beige .contenu span{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    text-align: center;
-}
-footer .contenu .icones{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-footer img{
-    width: 55px; height: 55px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    
-}
-}
-
-
-@media screen and (min-width:320px) and (max-width:600px) {
-     
+/* TABLETTE */
+@media screen and (min-width:620px) and (max-width:1024px) {
+    body{
+        margin: 0 10%;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    .intro,
+    .sc .row{
+        flex-direction: column;
+    }
+    .intro>div:first-of-type{
+        margin: auto;
+    }
+    .sc .row .zoneTexte, .sc .row .imgTitre{
+        margin: 15px auto;
+        text-align: center;
+    }
+    .sc .choix div{
+        width: 48%;
+    }
+    .sc .choix button{
+        width: auto;
+    }
 }
