@@ -137,7 +137,7 @@ footer span{
 /* TEL */
 @media screen and (max-width:620px) {
     body{
-        margin: 0 5%;
+        margin: 0;
     }
     header ul {
         display: none;
@@ -145,6 +145,10 @@ footer span{
     .intro,
     .sc .row{
         flex-direction: column;
+    }
+    .intro div img{
+        width: 250px;
+        height: 200px;
     }
     .sc .choix div{
         width: 100%;
